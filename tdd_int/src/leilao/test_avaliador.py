@@ -21,7 +21,7 @@ class TestAvaliador(TestCase):
         """Macro para avaliar Lances"""
         from operator import itemgetter
 
-        [self.leilao.lances.append(Lance(user,lance)) for (user,lance) in lances]
+        [leilao.lances.append(Lance(user,lance)) for (user,lance) in lances]
 
         avaliador = Avaliador()
         avaliador.avalia(leilao)
