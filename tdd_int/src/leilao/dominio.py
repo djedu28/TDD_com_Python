@@ -31,8 +31,8 @@ class Avaliador:
 
     def __init__(self):
         from math import inf # Importando infinito da biblioteca math
-        self.maior_lance = inf # Maior lance possivel é Infinito
-        self.menor_lance = 0   # Menor lance possivel é Zero
+        self.maior_lance = 0    # Maior lance possivel é Zero
+        self.menor_lance = inf  # Menor lance possivel é Infinito
 
 
     def avalia(self, leilao):
