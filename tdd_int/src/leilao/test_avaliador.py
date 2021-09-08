@@ -4,8 +4,17 @@ from src.leilao.dominio import Usuario, Lance, Leilao, Avaliador
 
 
 class TestAvaliador(TestCase):
-    #test_quando_..._deve_...
+    """
+        Nomeclatura: test_quando_..._deve_retornar_...
+            def test_quando_..._deve_retornar_...(self):
 
+        Metodos herdados de TestCase:
+        |nome:             | Ação:
+        |    setUp         |  Antes   de cada teste
+        |    tearDown      |  Depois  de cada teste
+        |    setUpClass    |  Antes   de todos os testes
+        |    tearDownClass |  Depois  de todos os testes
+    """
     def setUp(self):
         self.users = {
             "Edu":Usuario('Edu'),
