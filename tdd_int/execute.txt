@@ -1,0 +1,2 @@
+cd tdd_int
+python -m src.leilao.principal
