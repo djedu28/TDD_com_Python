@@ -6,6 +6,7 @@ from src.leilao.dominio import Usuario, Lance, Leilao, Avaliador
 class TestAvaliador(TestCase):
 
     def test_avalia(self):
+        # LANCE EM ORDEM DECRESCENTE
 
         users = [
             Usuario('Edu'),
@@ -28,7 +29,7 @@ class TestAvaliador(TestCase):
         self.assertEqual(maior_valor_esperado, avaliador.maior_lance)
 
     def test_avalia2(self):
-
+        # LANCE EM ORDEM CRESSENTE
         users = [
             Usuario('Edu'),
             Usuario('Karol')
