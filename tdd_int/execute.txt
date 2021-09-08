@@ -1,4 +1,4 @@
 cd tdd_int
 
 python -m src.leilao.principal
-python -m src.leilao.test_avaliador
+python -m unittest src.leilao.test_avaliador
