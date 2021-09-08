@@ -33,3 +33,15 @@ class Avaliador:
         from math import inf # Importando infinito da biblioteca math
         self.maior_lance = inf # Maior lance possivel é Infinito
         self.menor_lance = 0   # Menor lance possivel é Zero
+
+
+    def avalia(self, leilao):
+        """Método que avalia o MAIOR e MENOR lance"""
+
+        for lance in leilao.lances:
+            # caso seja o maior lance
+            if lance.valor > self.maior_lance:
+                self.maior_lance = lance.valor
+            # Caso seja o menor lance
+            if lance.valor < self.menor_lance:
+                self.menor_lance = lance.valor
