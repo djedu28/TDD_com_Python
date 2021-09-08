@@ -4,6 +4,7 @@ from src.leilao.dominio import Usuario, Lance, Leilao, Avaliador
 
 
 class TestAvaliador(TestCase):
+    #test_quando_..._deve_...
 
     def test_quando_adicionados_em_ordem_crescente_deve_retornar_o_maior_e_o_menor_valor_de_um_lance(self):
         # LANCE EM ORDEM DECRESCENTE
@@ -49,3 +50,26 @@ class TestAvaliador(TestCase):
 
         self.assertEqual(menor_valor_esperado, avaliador.menor_lance)
         self.assertEqual(maior_valor_esperado, avaliador.maior_lance)
+
+
+    def test_quando_tiver_um_lance_deve_retornar_o_mesmo_valor_no_maior_e_menor_lance(self):
+
+        # LANCE UNICO
+        lance = 100.0
+
+        users = [
+            Usuario('Edu'),
+        ]
+
+        leilao = Leilao('Celular')
+
+        leilao.lances.append(Lance(users[0], lance)) # LANCE de Edu
+
+
+        avaliador = Avaliador()
+        avaliador.avalia(leilao)
+
+        self.assertEqual(lance, avaliador.menor_lance)
+        self.assertEqual(lance, avaliador.menor_lance)
+
+    # def test_quando_..._deve_...(self):
