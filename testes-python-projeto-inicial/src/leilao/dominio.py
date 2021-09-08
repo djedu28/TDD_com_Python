@@ -1,3 +1,4 @@
+
 class Usuario:
 
     def __init__(self, nome):
@@ -24,3 +25,11 @@ class Leilao:
     @property
     def lances(self):
         return self.__lances
+
+
+class Avaliador:
+
+    def __init__(self):
+        from math import inf # Importando infinito da biblioteca math
+        self.maior_lance = inf # Maior lance possivel é Infinito
+        self.menor_lance = 0   # Menor lance possivel é Zero
